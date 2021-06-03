@@ -18,7 +18,7 @@ def get_word_cloud(dic):
     font = "./pingfang.ttf"
     # pil_img = WordCloud(width=500, height=500, font_path=font).generate(text=text).to_image()
 
-    pil_img = WordCloud(width=800, height=300, background_color="white", font_path=font,
+    pil_img = WordCloud(width=1024, height=768, background_color="white", font_path=font,
                         prefer_horizontal=1.0).generate_from_frequencies(
         dic).to_image()
     img = io.BytesIO()
