@@ -47,7 +47,7 @@ def resp():
 def cloud():
     """生成词云图片接口，以base64格式返回"""
     text = request.json.get("word")
-    size = request.args.get("size")
+    size = request.json.get("size")
     if not size:
         size = 10
     result = synonyms.nearby(text, int(size))
